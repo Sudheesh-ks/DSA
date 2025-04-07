@@ -77,6 +77,28 @@
 // // console.log(reverseStr("hai bro"));
 
 
+
+// Reverse each word in a sentence
+
+// function reverseWord(word) {
+//   if (word.length <= 1) return word;
+//   return reverseWord(word.slice(1)) + word[0];
+// }
+
+// function reverseEachWord(sentence) {
+//   return sentence
+//     .split(' ')
+//     .map(word => reverseWord(word))
+//     .join(' ');
+// }
+
+
+// const input = "I love programming";
+// const output = reverseEachWord(input);
+// console.log(output); // Output: "I evol gnimmargorp"
+
+
+
 // function rmchar(str,char,index = 0,result = ""){
 //     if(index === str.length){
 //         return result;
