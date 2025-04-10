@@ -98,12 +98,6 @@
 // console.log(output); // Output: "I evol gnimmargorp"
 
 
-// // Example usage
-// const input = "hello world example";
-// const output = reverseWords(input);
-// console.log(output); // "olleh dlrow elpmaxe"
-
-
 
 // function removeElement(arr,value){
 //     const index = arr.indexOf(value);
