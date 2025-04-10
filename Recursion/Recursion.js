@@ -98,45 +98,6 @@
 // console.log(output); // Output: "I evol gnimmargorp"
 
 
-
-// function rmchar(str,char,index = 0,result = ""){
-//     if(index === str.length){
-//         return result;
-//     }
-//     if(str[index] !== char){
-//         result += str[index];
-//     }
-//     return rmchar(str,char,index + 1,result);
-// }
-
-// console.log(rmchar("Hello Recursion","R"));
-
-
-
-// function reverseWords(str) {
-//     let result = ""; // This will store the final result (all words reversed).
-//     let word = ""; // This will temporarily store each word as we process it.
-
-//     // Loop through each character in the string, including one extra loop for the last word.
-//     for (let i = 0; i <= str.length; i++) {
-//         // If we encounter a space or reach the end of the string:
-//         if (i === str.length || str[i] === " ") {
-//             // Reverse the current word by looping through it backward.
-//             for (let j = word.length - 1; j >= 0; j--) {
-//                 result += word[j]; // Add each character of the reversed word to the result.
-//             }
-//             if (i !== str.length) { // If it's not the end of the string:
-//                 result += " "; // Add a space after the reversed word.
-//             }
-//             word = ""; // Reset `word` for the next word.
-//         } else {
-//             word += str[i]; // If it's not a space, keep building the current word.
-//         }
-//     }
-
-//     return result; // Return the final string with all reversed words.
-// }
-
 // // Example usage
 // const input = "hello world example";
 // const output = reverseWords(input);
