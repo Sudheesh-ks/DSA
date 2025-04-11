@@ -8,6 +8,7 @@
 //     }
 // }
 
+
 // console.log(printAllsubArray([1,2,3]))
 
 
