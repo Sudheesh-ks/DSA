@@ -459,9 +459,9 @@
 //     }
 
 
-//     mergeSortedList(list1,list2){
+//     mergeSortedList(list2){
 //         let mergeSort = []
-//         let curr1 = list1.head;
+//         let curr1 = this.head;
 //         let curr2 = list2.head;
 //         while(curr1 && curr2){
 //             if(curr1.data < curr2.data){
