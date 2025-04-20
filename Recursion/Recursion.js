@@ -115,32 +115,3 @@
 // }
 
 // console.log(rmvelem([1,2,3,4],3));
-
-
-
-// function subArray(arr){
-//     if(arr.length === 0){
-//         return [];
-//     }
-//     let maxArray = []
-//     let currentArray = [arr[0]]
-//     for(let i = 1; i < arr.length;i++){
-//         if(arr[i] > arr[i -1]){
-//             currentArray.push(arr[i]);
-//         }else{
-//             if(currentArray.length > maxArray.length){
-//             maxArray = [...currentArray];
-//         }
-//         currentArray = [arr[i]];
-//     }
-// }
-
-//          if(currentArray.length > maxArray.length){
-//             maxArray = currentArray;
-//         }
-
-//         return maxArray
-// }
-
-
-// console.log(subArray([1, 2, 3, 1, 2, 3, 4]))
