@@ -68,7 +68,7 @@
 
 // // // To reverse a string using recursion
 // // function reverseStr(str){
-// //     if(str === ""){
+// //     if(str.length <= 1){
 // //         return str;
 // //     }
 // //     return reverseStr(str.slice(1)) + str[0];
