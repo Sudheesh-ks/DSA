@@ -31,7 +31,7 @@
 //     if(target < arr[middleIndex]){
 //         return recursiveBinary(arr,target,left,middleIndex - 1);
 //     }else{
-//         return recursiveBinary(arr,target,middleIndex - 1,right);
+//         return recursiveBinary(arr,target,middleIndex + 1,right);
 //     }
 // }
 
