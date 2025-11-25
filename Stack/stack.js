@@ -258,24 +258,23 @@
 
 
 
+// Sorting a stack
+
 // function sortStack(stack) {
-//     const auxStack = [];
+//     const tempStack = [];
   
 //     while (stack.length > 0) {
-//       const temp = stack.pop(); // Pop an element from the original stack
+//       const temp = stack.pop(); 
   
-//       // Move elements from auxiliary stack to original stack if they are greater than temp
-//       while (auxStack.length > 0 && auxStack[auxStack.length - 1] > temp) {
-//         stack.push(auxStack.pop());
+//       while (tempStack.length > 0 && tempStack[tempStack.length - 1] > temp) {
+//         stack.push(tempStack.pop());
 //       }
   
-//       // Push the current element to the auxiliary stack
 //       auxStack.push(temp);
 //     }
   
-//     // Transfer the sorted elements back to the original stack
-//     while (auxStack.length > 0) {
-//       stack.push(auxStack.pop());
+//     while (tempStack.length > 0) {
+//       stack.push(tempStack.pop());
 //     }
   
 //     return stack;
