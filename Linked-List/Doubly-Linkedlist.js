@@ -106,6 +106,38 @@
 //         }
 //         this.size--
 //     }
+
+
+// Remove from middle
+ // removeMiddle(){
+ //        if(!this.head) return null;           // Empty list
+ //        if(this.head === this.tail){          // One element
+ //            this.head = this.tail = null;
+ //            return;
+ //        }
+
+ //        // Step 1: Find middle using slow/fast pointer
+ //        let slow = this.head;
+ //        let fast = this.head;
+
+ //        while(fast && fast.next){
+ //            slow = slow.next;
+ //            fast = fast.next.next;
+ //        }
+
+ //        // slow = middle node
+ //        let mid = slow;
+
+ //        // Step 2: Delete middle
+ //        if(mid.prev) mid.prev.next = mid.next;
+ //        if(mid.next) mid.next.prev = mid.prev;
+
+ //        // If middle was head or tail, update them
+ //        if(mid === this.head) this.head = mid.next;
+ //        if(mid === this.tail) this.tail = mid.prev;
+
+ //        return mid.data; // optional return
+ //    }
     
     
 //     reverse(){
