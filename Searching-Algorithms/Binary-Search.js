@@ -36,3 +36,26 @@
 // }
 
 // console.log(recursiveBinary([1,2,3,4,5,6,7],4));
+
+// minimum from rotated sorted array using binary search
+// function findMin(nums) {
+//     let low = 0;
+//     let high = nums.length - 1;
+
+//     while (low < high) {
+//         let mid = Math.floor((low + high) / 2);
+
+//         // If mid > high element, min is in right
+//         if (nums[mid] > nums[high]) {
+//             low = mid + 1;
+//         } 
+//         // Otherwise, min is in left including mid
+//         else {
+//             high = mid;
+//         }
+//     }
+
+//     return nums[low];
+// }
+
+// console.log(findMin([4,5,6,7,0,1,2]));
