@@ -59,3 +59,29 @@
 // }
 
 // console.log(findMin([4,5,6,7,0,1,2]));
+
+
+// Binary search in a nested array
+// function findPosition(matrix, target) {
+//     for (let i = 0; i < matrix.length; i++) {
+//         for (let j = 0; j < matrix[i].length; j++) {
+//             if (matrix[i][j] === target) {
+//                 return [i, j];  // row i, column j
+//             }
+//         }
+//     }
+//     return null; // target not found
+// }
+
+// // Example
+// let array = [
+//     [1,2,3],
+//     [5,6,9],
+//     [10,23,34]
+// ];
+
+// let target = 9;
+
+// console.log(findPosition(array, target)); 
+// // Output: [1, 2]
+
