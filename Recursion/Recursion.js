@@ -40,6 +40,23 @@
 // // console.log(removeChar("Hello Recursion","R"));
 
 
+// Remove vowels from a string
+// function remove(str, result = "", index = 0){
+//     if(str.length === index){
+//        return result;
+//     }
+    
+//     let vowels = "aeiou";
+//     if(!result.includes(str[index]) && !vowels.includes(str[index])){
+//         result += str[index];
+//     }
+    
+//     return remove(str, result, index + 1);
+// }
+
+// console.log(remove("sudhi"))
+
+
 // // // Print the first 10 elements of fibonacci using recursion
 // // function fibonacci(n){
 // //     if(n <= 1){
