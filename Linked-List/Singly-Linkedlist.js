@@ -252,22 +252,21 @@
 
 //     // To remove duplicates from an unsorted linkedlist
 //     removeDuplicates(){
-//         if(this.size === 0){
-//             console.log('The list is empty');
-//             return null;
-//         }
-//         let curr = this.head;
-//         let visited = new Set();
-//         let prev = null;
-//         while(curr){
-//             if(visited.has(curr.data)){
-//                 prev.next = curr.next;
-//             }else{
-//             visited.add(curr.data);
-//             prev = curr;
-//         }
-//         curr = curr.next;
-//         }
+//      if(this.size === 0){
+        //     return null
+        // }
+        // let curr = this.head
+        // let visited = new Set();
+        // visited.add(curr.data);
+        // while(curr.next){
+        //     if(visited.has(curr.next.data)){
+        //         curr.next = curr.next.next;
+        //         this.size--;
+        //     }else{
+        //         visited.add(curr.next.data);
+        //         curr = curr.next;
+        //     }
+        // }
 //     }
 
 
