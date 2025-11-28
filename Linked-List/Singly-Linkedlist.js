@@ -233,18 +233,21 @@
 
 
 //     // To remove duplicates from a Sorted linkedlist
-//     removeSortedDuplicates(){
-//         if(this.size === 0){
-//             console.log('The list is empty');
-//             return null;
-//         }
-//         let curr = this.head;
-//         if(curr.data === curr.next.data){
-//             curr.next = curr.next.next;
-//         }else{
-//             curr = curr.next;
-//         }
-//     }
+        // removeSortedDuplicates(){
+        //     if(this.size === 0){
+        //         return "list is empty"
+        //     }else{
+        //         let curr = this.head;
+        //         while(curr.next){
+        //             if(curr.data === curr.next.data){
+        //                 curr.next = curr.next.next;
+        //                 this.size--;
+        //             }else{
+        //                 curr = curr.next;
+        //             }
+        //         }
+        //     }
+        // }
 
 
 //     // To remove duplicates from an unsorted linkedlist
