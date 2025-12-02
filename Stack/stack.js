@@ -270,7 +270,7 @@
 //         stack.push(tempStack.pop());
 //       }
   
-//       auxStack.push(temp);
+//       tempStack.push(temp);
 //     }
   
 //     while (tempStack.length > 0) {
