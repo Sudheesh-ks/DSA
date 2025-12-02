@@ -58,18 +58,17 @@
 
 
 // Binary search in a nested array
-// function findPosition(matrix, target) {
+// function nestedBinarySearch(matrix, target) {
 //     for (let i = 0; i < matrix.length; i++) {
 //         for (let j = 0; j < matrix[i].length; j++) {
 //             if (matrix[i][j] === target) {
-//                 return [i, j];  // row i, column j
+//                 return [i, j];
 //             }
 //         }
 //     }
-//     return null; // target not found
+//     return -1;
 // }
 
-// // Example
 // let array = [
 //     [1,2,3],
 //     [5,6,9],
@@ -78,6 +77,6 @@
 
 // let target = 9;
 
-// console.log(findPosition(array, target)); 
+// console.log(nestedBinarySearch(array, target)); 
 // // Output: [1, 2]
 
