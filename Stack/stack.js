@@ -283,3 +283,32 @@
 //   // Example usage
 //   const stack = [34, 3, 31, 98, 92, 23];
 //   console.log(sortStack(stack));
+
+
+// Sort string using stack
+
+// function sort(str){
+//     let stack = [];
+//     let temp = [];
+    
+//     for(let char of str){
+//         while(stack.length && stack[stack.length - 1] < char){
+//             temp.push(stack.pop())
+//         }
+        
+//         stack.push(char);
+        
+//         while(temp.length){
+//             stack.push(temp.pop());
+//         }
+//     }
+//     let result = "";
+//     while(stack.length){
+//         result += stack.pop();
+//     }
+    
+//     return result;
+// }
+
+
+// console.log(sort("hello"))
