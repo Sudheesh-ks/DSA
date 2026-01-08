@@ -1,3 +1,5 @@
+// ------------ SEPERATE CHAINING --------------
+
 // class HashTable {
 //     constructor(size){
 //         this.table = new Array(size);
@@ -73,8 +75,11 @@
 // table.display()
 
 
+// ------------- OPEN ADDRESSING ----------------------
 
 
+
+// === DOUBLE HASHING ===
 // class HashTable {
 //     constructor(size) {
 //         this.table = new Array(size).fill(null);
