@@ -115,10 +115,10 @@
 
 //     remove(key){
 //         let index = this.hash(key);
-
+//          let isDeleted;
 //         while(this.table[index]){
-//             if(this.table[index][0] === key){
-//                 this.table[index] = undefined;
+//             if(this.table[index] !== isDeleted && this.table[index][0] === key){
+//                 this.table[index] = isDeleted;
 //                 return;
 //             }
 //             index = (index + 1) % this.size;
