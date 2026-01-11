@@ -78,7 +78,7 @@
 // ------------- OPEN ADDRESSING ----------------------
 
 // === LINEAR PROBING ===
-// class HashTableLinearProbing {
+// class HashTable {
 //     constructor(size){
 //         this.table = new Array(size);
 //         this.size = size;
@@ -87,52 +87,65 @@
 //     hash(key){
 //         let total = 0;
 //         for(let i = 0; i < key.length; i++){
-//             total += key.charCodeAt(i);
+//             total += key.charCodeAt(i)
 //         }
 //         return total % this.size;
 //     }
 
-//     set(key, value){
+//     set(key,value){
 //         let index = this.hash(key);
-
-//         while(this.table[index] && this.table[index][0] !== key){
-//             index = (index + 1) % this.size;
+//         let bucket = this.table[index];
+//         if(!bucket){
+//             this.table[index] = [[key,value]]
+//         }else{
+//             let sameKeyIndex = bucket.find(item => item[0] === key);
+//             if(sameKeyIndex){
+//                 sameKeyIndex[1] = value;
+//             }else{
+//                 bucket.push([key,value])
+//             }
 //         }
-
-//         this.table[index] = [key, value];
 //     }
 
 //     get(key){
 //         let index = this.hash(key);
-
-//         while(this.table[index]){
-//             if(this.table[index][0] === key){
-//                 return this.table[index][1];
+//         let bucket = this.table[index];
+//         if(bucket){
+//             let sameKeyIndex = bucket.find(item => item[0] === key);
+//             if(sameKeyIndex){
+//                 return sameKeyIndex[1];
 //             }
-//             index = (index + 1) % this.size;
 //         }
 //     }
 
 //     remove(key){
 //         let index = this.hash(key);
-//          let isDeleted;
-//         while(this.table[index]){
-//             if(this.table[index] !== isDeleted && this.table[index][0] === key){
-//                 this.table[index] = isDeleted;
-//                 return;
+//         let bucket = this.table[index];
+//         if(bucket){
+//             let sameKeyIndex = bucket.findIndex(item => item[0] === key);
+//             if(sameKeyIndex !== -1){
+//                 bucket.splice(sameKeyIndex,1)
 //             }
-//             index = (index + 1) % this.size;
 //         }
 //     }
 
 //     display(){
-//         for(let i = 0; i < this.size; i++){
+//         for(let i = 0; i < this.table.length; i++){
 //             if(this.table[i]){
-//                 console.log(i, this.table[i]);
+//                 console.log(i, this.table[i])
 //             }
 //         }
 //     }
 // }
+
+
+// const table = new HashTable(50);
+// table.set("name","sudhi");
+// table.set("age",22)
+// table.set("mane",21)
+// console.log(table.get("mane"));
+// table.remove("mane")
+// table.display()
 
 
 
