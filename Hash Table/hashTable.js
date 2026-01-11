@@ -156,8 +156,8 @@
 //         let index = this.hash(key);
 //         let i = 1;
 //         while(this.table[index] && this.table[index][0] !== key){
-//             index = (this.hash(key) + i * i) % this.size;
 //             i++;
+//             index = (this.hash(key) + i * i) % this.size;
 //         }
 //         this.table[index] = [key,value];
 //     }
@@ -169,8 +169,8 @@
 //             if(this.table[index][0] === key){
 //                 return this.table[index][1];
 //             }
-//             index = (this.hash(key) + i * i) % this.size;
 //             i++;
+//             index = (this.hash(key) + i * i) % this.size;
 //         }
 //     }
 
@@ -183,8 +183,8 @@
 //                 this.table[index] = deleted;
 //                 return
 //             }
-//             index = (this.hash(key) + i * i) % this.size;
 //             i++;
+//             index = (this.hash(key) + i * i) % this.size;
 //         }
 //     }
 
@@ -212,101 +212,84 @@
 
 // === DOUBLE HASHING ===
 // class HashTable {
-//     constructor(size) {
-//         this.table = new Array(size).fill(null);
+//     constructor(size){
+//         this.table = new Array(size);
 //         this.size = size;
 //     }
 
-//     // Primary hash function (h1)
-//     hash1(key) {
+//     hash1(key){
 //         let total = 0;
-//         for (let i = 0; i < key.length; i++) {
+//         for(let i = 0; i < key.length; i++){
+//             total += key.charCodeAt(i)
+//         }
+//         return total % this.size;
+//     }
+
+//     hash2(key){
+//         let total = 0;
+//         for(let i= 0; i < key.length; i++){
 //             total += key.charCodeAt(i);
 //         }
 //         return total % this.size;
 //     }
 
-//     // Secondary hash function (h2) - Ensures step is never zero
-//     hash2(key) {
-//         let total = 0;
-//         for (let i = 0; i < key.length; i++) {
-//             total += key.charCodeAt(i);
-//         }
-//         return (total % (this.size - 1)) + 1;
-//     }
-
-//     // Insert key-value pair using double hashing
-//     set(key, value) {
+//     set(key,value){
 //         let index = this.hash1(key);
 //         let step = this.hash2(key);
-//         let i = 0;
-
-//         while (this.table[(index + i * step) % this.size] !== null) {
-//             let [existingKey] = this.table[(index + i * step) % this.size];
-//             if (existingKey === key) {
-//                 // Update existing key
-//                 this.table[(index + i * step) % this.size] = [key, value];
-//                 return;
-//             }
+//         let i = 1;
+//         while(this.table[index] && this.table[index][0] !== key){
+//             index = (this.hash1(key) + i * step) % this.size;
 //             i++;
-//             if (i >= this.size) return; // Table is full
 //         }
-//         this.table[(index + i * step) % this.size] = [key, value];
+//         this.table[index] = [key,value];
 //     }
 
-//     // Retrieve value by key using double hashing
-//     get(key) {
-//         let index = this.hash1(key);
+//     get(key){
+//        let index = this.hash1(key);
 //         let step = this.hash2(key);
-//         let i = 0;
-
-//         while (this.table[(index + i * step) % this.size] !== null) {
-//             let [existingKey, value] = this.table[(index + i * step) % this.size];
-//             if (existingKey === key) {
-//                 return value;
+//         let i = 1;
+//         while (this.table[index]) {
+//             if(this.table[index][0] === key){
+//                 return this.table[index][1];
 //             }
-//             i++;
-//             if (i >= this.size) return undefined; // Key not found
+//             index = (this.hash1(key) + i * step) % this.size;
+//             i++
 //         }
-//         return undefined;
 //     }
 
-//     // Remove key-value pair using double hashing
-//     remove(key) {
-//         let index = this.hash1(key);
+//     remove(key){
+//        let index = this.hash1(key);
 //         let step = this.hash2(key);
-//         let i = 0;
-
-//         while (this.table[(index + i * step) % this.size] !== null) {
-//             let [existingKey] = this.table[(index + i * step) % this.size];
-//             if (existingKey === key) {
-//                 this.table[(index + i * step) % this.size] = null;
-//                 return;
+//         let deleted;
+//         let i = 1;
+//         while (this.table[index]) {
+//             if(this.table[index] !== deleted && this.table[index][0] === key){
+//                 this.table[index] = deleted;
+//                 return
 //             }
-//             i++;
-//             if (i >= this.size) return; // Key not found
+//             index = (this.hash1(key) + i * step) % this.size;
+//             i++
 //         }
 //     }
 
-//     // Display hash table
-//     display() {
-//         for (let i = 0; i < this.table.length; i++) {
-//             if (this.table[i] !== null) {
-//                 console.log(i, this.table[i]);
+//     display(){
+//         for(let i = 0; i < this.table.length; i++){
+//             if(this.table[i]){
+//                 console.log(i, this.table[i])
 //             }
 //         }
 //     }
 // }
 
-// // Example usage
-// const table = new HashTable(10);
-// table.set("name", "Bruce"); fjff
-// table.set("age", 38);
-// table.display();
-// console.log("Get 'name':", table.get("name"));
 
-// table.remove("name");
-// table.display();
+// const table = new HashTable(50);
+// table.set("name","sudhi");
+// table.set("age",22)
+// table.set("mane",21)
+// table.set("amen", 3);
+// console.log(table.get("mane"));
+// table.remove("mane")
+// table.display()
 // console.log("Get 'name' after removal:", table.get("name"));
 
 
