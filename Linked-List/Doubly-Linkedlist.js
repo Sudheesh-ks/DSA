@@ -140,24 +140,23 @@
  //    }
     
     
-//     reverse(){
-//         if(this.size === 0){
-//             return null
-//         }
-//         let curr = this.head
-//         let temp = null
-//         while(curr){
-//             temp = curr.prev
-//             curr.prev = curr.next
-//             curr.next = temp
-            
-//             curr = curr.prev
-//         }
-        
-//         temp = this.head
-//         this.head = this.tail
-//         this.tail = temp
+// reverse(){
+//     let curr = this.head;
+//     let temp = null;
+
+//     while(curr){
+//         temp = curr.prev;
+//         curr.prev = curr.next;
+//         curr.next = temp;
+
+//         curr = curr.prev;
 //     }
+
+//     if(temp){
+//         this.head = temp.prev;
+//     }
+// }
+
 
 //     // Printing the linkedlist
 //     print(){
