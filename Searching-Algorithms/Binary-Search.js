@@ -57,7 +57,7 @@
 // console.log(findMin([4,5,6,7,0,1,2]));
 
 
-// Binary search in a nested array
+// Linear search in a nested array
 // function nestedBinarySearch(matrix, target) {
 //     for (let i = 0; i < matrix.length; i++) {
 //         for (let j = 0; j < matrix[i].length; j++) {
@@ -80,3 +80,31 @@
 // console.log(nestedBinarySearch(array, target)); 
 // // Output: [1, 2]
 
+
+// Binary search in 2D Array
+// function nestedBinarySearch(matrix, target) {
+//     for (let i = 0; i < matrix.length; i++) {
+//         let left = 0;
+//         let right = matrix[i].length - 1;
+
+//         while (left <= right) {
+//             let mid = Math.floor((left + right) / 2);
+
+//             if (matrix[i][mid] === target) return [i, mid];
+//             else if (matrix[i][mid] < target) left = mid + 1;
+//             else right = mid - 1;
+//         }
+//     }
+//     return -1;
+// }
+
+
+// let array = [
+//     [1,2,3],
+//     [5,6,9],
+//     [10,23,34]
+// ];
+
+// let target = 9;
+
+// console.log(nestedBinarySearch(array, target)); 
