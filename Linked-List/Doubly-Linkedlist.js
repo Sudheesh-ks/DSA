@@ -65,6 +65,7 @@
 //             return null
 //         }
 //         this.head = this.head.next
+//         this.head.prev = null;
 //         this.size--
 //     }
 
