@@ -312,3 +312,28 @@
 
 
 // console.log(sort("hello"))
+
+
+// Reverse a stack using recursion
+// function insertAtBottom(stack, value){
+//   if(stack.length === 0){
+//     stack.push(value);
+//     return;
+//   }
+  
+//   let top = stack.pop();
+//   insertAtBottom(stack, value);
+//   stack.push(top);
+// }
+
+// function reverseStack(stack){
+//   if(stack.length === 0) return;
+  
+//   let top = stack.pop();
+//   reverseStack(stack);
+//   insertAtBottom(stack, top);
+// }
+
+// let stack = [1,2,3];
+// reverseStack(stack);
+// console.log(stack)
