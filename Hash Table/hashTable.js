@@ -156,8 +156,8 @@
 //         let index = this.hash(key);
 //         let i = 1;
 //         while(this.table[index] && this.table[index][0] !== key){
-//             i++;
 //             index = (this.hash(key) + i * i) % this.size;
+//             i++
 //         }
 //         this.table[index] = [key,value];
 //     }
@@ -169,8 +169,8 @@
 //             if(this.table[index][0] === key){
 //                 return this.table[index][1];
 //             }
-//             i++;
 //             index = (this.hash(key) + i * i) % this.size;
+//             i++
 //         }
 //     }
 
@@ -183,8 +183,8 @@
 //                 this.table[index] = deleted;
 //                 return
 //             }
-//             i++;
 //             index = (this.hash(key) + i * i) % this.size;
+//             i++
 //         }
 //     }
 
