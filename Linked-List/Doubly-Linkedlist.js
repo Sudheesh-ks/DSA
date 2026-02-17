@@ -40,24 +40,20 @@
 //         this.size++
 //     }
 
-//     removeFromEnd(){
+//     removeTail(){
 //         if(this.size === 0){
-//             return null
+//           return "list is empty"
 //         }
-//         const value = this.tail.value
+    
 //         if(this.size === 1){
-//             this.head = null;
-//             this.tail = null;
+//           this.head = null;
+//           this.tail = null;
 //         }else{
-//             let prev = this.head;
-//             while(prev.next !== this.tail){
-//                 prev = prev.next;
-//             }
-//             prev.next = null
-//             this.tail = prev
-//         }
-//         this.size--
-//     }
+//           this.tail = this.tail.prev;
+//           this.tail.next = null;
+//        }
+//         this.size--;
+//      }
 
 
 //     removeFromFront(){
