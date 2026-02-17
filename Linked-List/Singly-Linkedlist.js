@@ -97,26 +97,32 @@
 
 
 //     // To remove node by index
-//     removeFrom(index){
-//         if(index < 0 || index > this.size){
-//             console.log('This is not a valid index');
-//             return null;
-//         }
-//         let removedNode;
-//         if(index === 0){
-//             removedNode = this.head;
-//             this.head = this.head.next;
-//             this.size--;
-//         }else{
-//             let prev = this.head;
-//             for(let i = 0; i < index - 1; i++){
-//                 prev = prev.next;
-//             }
-//             removedNode = prev.next;
-//             prev.next = removedNode.next;
-//         }
-//         this.size--;
-//     }
+// removeFrom(index) {
+//   if (index < 0 || index >= this.size || !this.head) {
+//     console.log("This is not a valid index");
+//     return null;
+//   }
+
+//   // remove head
+//   if (index === 0) {
+//     this.head = this.head.next;
+//     this.size--;
+//     return;
+//   }
+
+//   let prev = this.head;
+
+//   for (let i = 0; i < index - 1; i++) {
+//     prev = prev.next;
+//   }
+
+//   if (prev.next) {
+//     prev.next = prev.next.next;
+//   }
+
+//   this.size--;
+// }
+
 
 
 //     // Remove node by value
