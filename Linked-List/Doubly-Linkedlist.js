@@ -98,8 +98,8 @@
 //                 curr = curr.next 
 //                 currIndex++;
 //             }
-//             curr.prev.next = curr.next
-//             curr.next.prev = curr.prev
+//             let prev = curr.prev;
+//             prev.next = curr.next;
 //         }
 //         this.size--
 //     }
