@@ -58,13 +58,13 @@
 
 
 // // // Print the first 10 elements of fibonacci using recursion
-// // function fibonacci(n){
-// //     if(n <= 1){
-// //         return n;
-// //     }else{
-// //         return fibonacci(n - 1) + fibonacci(n - 2);
-// //     }
-// // }
+// function fib(n, a = 0,b = 1){
+//     if(n === 0) return a;
+    
+//     return fib(n - 1, b, a + b);
+// }
+
+// console.log(fib(5))
 
 
 // // for(let i = 0; i < 10; i++){
