@@ -56,6 +56,17 @@
 //         }
 //     }
 
+    // height(root){
+    //     if(!root){
+    //         return -1;
+    //     }
+        
+    //     let leftHeight = this.height(root.left);
+    //     let rightHeight = this.height(root.right);
+        
+    //     return Math.max(leftHeight,rightHeight) + 1
+    // }
+
 
 // // DFS
 //     preOrder(root){
