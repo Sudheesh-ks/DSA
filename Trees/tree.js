@@ -68,6 +68,19 @@
     // }
 
 
+    // countLeaf(root){
+    //     if(!root){
+    //         return 0;
+    //     }
+        
+    //     if(!root.left && !root.right){
+    //         return 1
+    //     }
+        
+    //     return this.countLeaf(root.left) + this.countLeaf(root.right)
+    // }
+
+
 // // DFS
 //     preOrder(root){
 //         if(root){
