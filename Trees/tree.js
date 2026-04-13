@@ -157,6 +157,26 @@
 //     }
 
 
+// removeDupli(){
+//         let seen = new Set();
+//         this.root = this.remove(this.root,seen)
+//     }
+    
+//     remove(root,seen){
+//         if(!root) return null;
+        
+//         root.left = this.remove(root.left,seen);
+//         root.right = this.remove(root.right,seen);
+        
+//         if(seen.has(root.data)){
+//             return this.deleteNode(root,root.data)
+//         }else{
+//              seen.add(root.data)
+//         }
+//         return root
+//     }
+
+
 //     findLCA(root,node1,node2){
 //         if(!root){
 //             return null
