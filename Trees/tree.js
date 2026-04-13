@@ -94,6 +94,21 @@
 //     }
 
 
+//  printLeafNodes(root){
+//     if(!root){
+//         return;
+//     }
+
+//     if(!root.left && !root.right){
+//         console.log(root.data);
+//         return;
+//     }
+
+//     this.printLeafNodes(root.left);
+//     this.printLeafNodes(root.right);
+// }
+
+
 // // DFS
 //     preOrder(root){
 //         if(root){
