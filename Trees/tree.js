@@ -81,6 +81,19 @@
     // }
 
 
+// sumofLeaf(root){
+//         if(!root){
+//             return 0;
+//         }
+        
+//         if(!root.left && !root.right){
+//             return root.data
+//         }
+        
+//         return this.sumofLeaf(root.left) + this.sumofLeaf(root.right)
+//     }
+
+
 // // DFS
 //     preOrder(root){
 //         if(root){
