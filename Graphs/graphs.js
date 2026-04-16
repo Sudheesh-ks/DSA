@@ -69,30 +69,28 @@
 //     }
 
 
-//      hasCycle() {
+// hasCycle(){
 //         let visited = new Set();
-    
-//         function dfs(node, parent) {
+        
+//         const dfs = (node,parent) => {
 //             visited.add(node);
-    
-//             for (let neighbor of this.adjacencyList[node]) {
-//                 if (!visited.has(neighbor)) {
-//                     if (dfs(neighbor, node)) return true;
-//                 } else if (neighbor !== parent) {
-//                     return true; 
+            
+//             for(let neighbour of this.adjacencyList[node]){
+//                 if(!visited.has(neighbour)){
+//                     if(dfs(neighbour,node)) return true;
+//                 }else if(neighbour !== parent){
+//                     return true;
 //                 }
 //             }
-    
-//             return false;
+//             return false
 //         }
-    
-//         for (let node of Object.keys(this.adjacencyList)) {
-//             if (!visited.has(node)) {
-//                 if (dfs(node, null)) return true;
+        
+//         for(let node of Object.keys(this.adjacencyList)){
+//             if(!visited.has(node)){
+//                 if(dfs(node,null)) return true
 //             }
 //         }
-    
-//         return false;
+//         return false
 //     }
 
 
