@@ -94,6 +94,23 @@
 //     }
 
 
+// dfs(start){
+//         let visited = new Set();
+        
+//         const traverse = (node) => {
+//             if(!node || visited.has(node)) return;
+            
+//             visited.add(node);
+//             console.log(node);
+            
+//             for(let neighbour of this.adjacencyList[node]){
+//                 traverse(neighbour);
+//         }
+//         }
+//         traverse(start)
+//     }
+
+
 //     display(){
 //         for(let vertex in this.adjacencyList){
 //             console.log(vertex + ' -> ' + [...this.adjacencyList[vertex]]);
