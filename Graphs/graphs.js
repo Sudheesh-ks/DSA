@@ -111,6 +111,25 @@
 //     }
 
 
+// bfs(start){
+//         let queue = [start];
+//         let visited = new Set([start]);
+        
+//         while(queue.length > 0){
+//             let node = queue.shift();
+            
+//             console.log(node);
+            
+//             for(let neighbour of this.adjacencyList[node]){
+//                 if(!visited.has(neighbour)){
+//                     visited.add(neighbour);
+//                     queue.push(neighbour);
+//                 }
+//             }
+//         }
+//     }
+
+
 //     display(){
 //         for(let vertex in this.adjacencyList){
 //             console.log(vertex + ' -> ' + [...this.adjacencyList[vertex]]);
