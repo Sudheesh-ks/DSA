@@ -340,6 +340,31 @@
     //     traverse(root);
     //     return result;
     // }
+
+
+// kthSmallest(root, k){
+//     let count = 0;
+//     let result = null;
+
+//     const traverse = (node) => {
+//         if(!node || count >= k){
+//             return;
+//         }
+
+//         traverse(node.left);
+
+//         count++;
+//         if(count === k){
+//             result = node.data;
+//             return;
+//         }
+
+//         traverse(node.right);
+//     }
+
+//     traverse(root);
+//     return result;
+// }
     
 // }
 
