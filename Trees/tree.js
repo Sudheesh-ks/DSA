@@ -317,6 +317,29 @@
 //         }
 //         return false;
 //     }
+
+
+    // kthLargest(root,k){
+    //     let count = 0;
+    //     let result = null;
+        
+    //     const traverse = (node) => {
+    //         if(!node || count > k){
+    //             return 
+    //         }
+            
+    //         traverse(node.right);
+            
+    //         count++;
+    //         if(count === k){
+    //             result = node.data;
+    //             return
+    //         }
+    //         traverse(node.left);
+    //     }
+    //     traverse(root);
+    //     return result;
+    // }
     
 // }
 
