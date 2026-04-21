@@ -293,17 +293,15 @@
 //     }
 
 
-//     isValidbst(root,min = -Infinity,max = Infinity){
-//         if(!root){
-//             return true
+//     isValid(root, min = -Infinity, max = Infinity){
+//         if(!root) return true;
+        
+//         if(root.data <= min || root.data  >= max){
+//             return false;
 //         }
-
-//         if(root.data < min || root.data > max){
-//             return false
-//         }
-
-//         return this.isValidbst(root.left,min,root.data)&&
-//                this.isValidbst(root.right,root.data,max)
+        
+//         return this.isValid(root.left,min,root.data)&&
+//                this.isValid(root.right, root.data, max)
 //     }
 
 
