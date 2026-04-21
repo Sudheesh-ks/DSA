@@ -305,6 +305,18 @@
 //         return this.isValidbst(root.left,min,root.data)&&
 //                this.isValidbst(root.right,root.data,max)
 //     }
+
+
+// isFull(root){
+//         if(!root) return true;
+        
+//         if(!root.left && !root.right) return true;
+        
+//         if(root.left && root.right){
+//             return this.isFull(root.left) && this.isFull(root.right);
+//         }
+//         return false;
+//     }
     
 // }
 
