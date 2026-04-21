@@ -317,6 +317,21 @@
 //     }
 
 
+// isBalanced(root){
+//     if(!root) return true;
+
+//     const leftHeight = this.height(root.left);
+//     const rightHeight = this.height(root.right);
+
+//     if(Math.abs(leftHeight - rightHeight) > 1){
+//         return false;
+//     }
+
+//     return this.isBalanced(root.left) &&
+//            this.isBalanced(root.right);
+// }
+
+
     // kthLargest(root,k){
     //     let count = 0;
     //     let result = null;
