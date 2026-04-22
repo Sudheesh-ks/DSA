@@ -121,6 +121,22 @@
 // }
 
 
+    // cloneGraph(){
+    //     let newGraph = new Graph();
+        
+    //     for(let vertex in this.adjacencyList){
+    //         newGraph.addVertex(vertex)
+    //     }
+        
+    //     for(let vertex in this.adjacencyList){
+    //         for(let neighbour of this.adjacencyList[vertex]){
+    //             newGraph.addEdge(vertex,neighbour)
+    //         }
+    //     }
+    //     return newGraph
+    // }
+
+
 // dfs(start){
 //         let visited = new Set();
         
