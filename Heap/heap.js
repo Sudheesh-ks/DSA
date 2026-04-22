@@ -83,6 +83,22 @@
 //     }
 // }
 
+// FOR KTH LARGEST
+// function kthLargest(nums,k){
+//     let heap = new MinHeap();
+    
+//     for(let num of nums){
+//         heap.insert(num);
+//     }
+    
+//     let result = 0;
+    
+//     for(let i = 1; i <= k; i++){
+//         result = heap.extractMax()
+//     }
+//     return result
+// }
+
 
 // const heap = new minHeap()
 // heap.insert(3);
