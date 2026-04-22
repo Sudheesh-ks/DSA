@@ -93,6 +93,33 @@
 //         return false
 //     }
 
+// For directed graph
+// hasCycle(){
+//     let visited = new Set();
+//     let recStack = new Set();
+
+//     const dfs = (node) => {
+//         if(recStack.has(node)) return true;
+//         if(visited.has(node)) return false;
+
+//         visited.add(node);
+//         recStack.add(node);
+
+//         for(let neighbour of this.adjacencyList[node]){
+//             if(dfs(neighbour)) return true;
+//         }
+
+//         recStack.delete(node);
+//         return false;
+//     }
+
+//     for(let node in this.adjacencyList){
+//         if(dfs(node)) return true;
+//     }
+
+//     return false;
+// }
+
 
 // dfs(start){
 //         let visited = new Set();
