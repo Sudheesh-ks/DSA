@@ -120,12 +120,10 @@
 // // Heap Sort
 
 // function heapSort(arr) {
-//     // Build Min Heap
 //     for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
 //         heapify(arr, arr.length, i);
 //     }
 
-//     // Extract elements one by one
 //     for (let i = arr.length - 1; i > 0; i--) {
 //         [arr[0], arr[i]] = [arr[i], arr[0]]; // Swap root with last element
 //         heapify(arr, i, 0); // Heapify the reduced heap
