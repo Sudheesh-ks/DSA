@@ -8,65 +8,314 @@
 
 
 // BINARY TREE IMPLEMENTATION
-// class Node {
+// class Node{
 //     constructor(data){
-//         this.data = data;
-//         this.left = null;
-//         this.right = null;
+//         this.data = data
+//         this.left = null
+//         this.right = null
 //     }
 // }
 
-// class BinaryTree {
+// class BinaryTree{
+
 //     constructor(){
-//         this.root = null;
+//         this.root = null
 //     }
-    
-//     insert(value){
-//         const node = new Node(value);
-        
-//         if(this.root === null){
-//             this.root = node;
-//             return;
+
+//     // INSERT (Level Order)
+//     insert(data){
+
+//         let newNode = new Node(data)
+
+//         if(!this.root){
+//             this.root = newNode
+//             return
 //         }
-        
-//         let queue = [this.root];
-        
-//         while(queue.length > 0){
-//             let curr = queue.shift();
-            
-//             if(!curr.left){
-//                 curr.left = node;
+
+//         let queue = [this.root]
+
+//         while(queue.length){
+
+//             let current = queue.shift()
+
+//             if(!current.left){
+//                 current.left = newNode
 //                 return
 //             }else{
-//                 queue.push(curr.left)
+//                 queue.push(current.left)
 //             }
-            
-//             if(!curr.right){
-//                 curr.right = node;
+
+//             if(!current.right){
+//                 current.right = newNode
 //                 return
 //             }else{
-//                 queue.push(curr.right);
+//                 queue.push(current.right)
 //             }
 //         }
 //     }
-    
-//     inOrder(root){
-//         if(root){
-//             this.inOrder(root.left);
-//             console.log(root.data);
-//             this.inOrder(root.right);
+
+//     // BFS Traversal
+//     levelOrder(){
+
+//         if(!this.root) return
+
+//         let queue = [this.root]
+
+//         while(queue.length){
+
+//             let current = queue.shift()
+
+//             console.log(current.data)
+
+//             if(current.left){
+//                 queue.push(current.left)
+//             }
+
+//             if(current.right){
+//                 queue.push(current.right)
+//             }
 //         }
+//     }
+
+//     // DFS PREORDER
+//     preorder(root = this.root){
+
+//         if(!root) return
+
+//         console.log(root.data)
+
+//         this.preorder(root.left)
+//         this.preorder(root.right)
+//     }
+
+//     // DFS INORDER
+//     inorder(root = this.root){
+
+//         if(!root) return
+
+//         this.inorder(root.left)
+
+//         console.log(root.data)
+
+//         this.inorder(root.right)
+//     }
+
+//     // DFS POSTORDER
+//     postorder(root = this.root){
+
+//         if(!root) return
+
+//         this.postorder(root.left)
+
+//         this.postorder(root.right)
+
+//         console.log(root.data)
+//     }
+
+//     // SEARCH
+//     search(value){
+
+//         if(!this.root) return false
+
+//         let queue = [this.root]
+
+//         while(queue.length){
+
+//             let current = queue.shift()
+
+//             if(current.data === value){
+//                 return true
+//             }
+
+//             if(current.left){
+//                 queue.push(current.left)
+//             }
+
+//             if(current.right){
+//                 queue.push(current.right)
+//             }
+//         }
+
+//         return false
+//     }
+
+//     // DELETE
+//     delete(value){
+
+//         if(!this.root) return
+
+//         // only root exists
+//         if(
+//             this.root.data === value &&
+//             !this.root.left &&
+//             !this.root.right
+//         ){
+//             this.root = null
+//             return
+//         }
+
+//         let queue = [this.root]
+
+//         let target = null
+//         let deepest = null
+//         let parentOfDeepest = null
+
+//         while(queue.length){
+
+//             let current = queue.shift()
+
+//             if(current.data === value){
+//                 target = current
+//             }
+
+//             if(current.left){
+//                 parentOfDeepest = current
+//                 deepest = current.left
+//                 queue.push(current.left)
+//             }
+
+//             if(current.right){
+//                 parentOfDeepest = current
+//                 deepest = current.right
+//                 queue.push(current.right)
+//             }
+//         }
+
+//         if(!target) return
+
+//         target.data = deepest.data
+
+//         if(parentOfDeepest.right === deepest){
+//             parentOfDeepest.right = null
+//         }else{
+//             parentOfDeepest.left = null
+//         }
+//     }
+
+//     // HEIGHT
+//     height(root = this.root){
+
+//         if(!root){
+//             return 0
+//         }
+
+//         let left = this.height(root.left)
+//         let right = this.height(root.right)
+
+//         return Math.max(left, right) + 1
+//     }
+
+//     // COUNT NODES
+//     count(root = this.root){
+
+//         if(!root){
+//             return 0
+//         }
+
+//         return (
+//             1 +
+//             this.count(root.left) +
+//             this.count(root.right)
+//         )
+//     }
+
+//     // COUNT LEAF NODES
+//     leafCount(root = this.root){
+
+//         if(!root){
+//             return 0
+//         }
+
+//         if(!root.left && !root.right){
+//             return 1
+//         }
+
+//         return (
+//             this.leafCount(root.left) +
+//             this.leafCount(root.right)
+//         )
+//     }
+
+//     // FIND MAX
+//     findMax(root = this.root){
+
+//         if(!root){
+//             return -Infinity
+//         }
+
+//         return Math.max(
+//             root.data,
+//             this.findMax(root.left),
+//             this.findMax(root.right)
+//         )
+//     }
+
+//     // FIND MIN
+//     findMin(root = this.root){
+
+//         if(!root){
+//             return Infinity
+//         }
+
+//         return Math.min(
+//             root.data,
+//             this.findMin(root.left),
+//             this.findMin(root.right)
+//         )
+//     }
+
+//     // CHECK IDENTICAL TREES
+//     isIdentical(root1, root2){
+
+//         if(!root1 && !root2){
+//             return true
+//         }
+
+//         if(!root1 || !root2){
+//             return false
+//         }
+
+//         return (
+//             root1.data === root2.data &&
+//             this.isIdentical(root1.left, root2.left) &&
+//             this.isIdentical(root1.right, root2.right)
+//         )
+//     }
+
+//     // CHECK IF TREE CONTAINS VALUE
+//     contains(root = this.root, value){
+
+//         if(!root){
+//             return false
+//         }
+
+//         if(root.data === value){
+//             return true
+//         }
+
+//         return (
+//             this.contains(root.left, value) ||
+//             this.contains(root.right, value)
+//         )
+//     }
+
+//     // MIRROR TREE
+//     invert(root = this.root){
+
+//         if(!root){
+//             return null
+//         }
+
+//         let temp = root.left
+//         root.left = root.right
+//         root.right = temp
+
+//         this.invert(root.left)
+//         this.invert(root.right)
+
+//         return root
 //     }
 // }
-
-
-// const tree = new BinaryTree();
-
-// tree.insert(10)
-// tree.insert(20)
-// tree.insert(30)
-// tree.insert(40)
-// tree.inOrder(tree.root)
 
 
 
