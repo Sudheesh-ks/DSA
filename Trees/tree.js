@@ -6,6 +6,72 @@
 //     }
 // }
 
+
+// BINARY TREE IMPLEMENTATION
+// class Node {
+//     constructor(data){
+//         this.data = data;
+//         this.left = null;
+//         this.right = null;
+//     }
+// }
+
+// class BinaryTree {
+//     constructor(){
+//         this.root = null;
+//     }
+    
+//     insert(value){
+//         const node = new Node(value);
+        
+//         if(this.root === null){
+//             this.root = node;
+//             return;
+//         }
+        
+//         let queue = [this.root];
+        
+//         while(queue.length > 0){
+//             let curr = queue.shift();
+            
+//             if(!curr.left){
+//                 curr.left = node;
+//                 return
+//             }else{
+//                 queue.push(curr.left)
+//             }
+            
+//             if(!curr.right){
+//                 curr.right = node;
+//                 return
+//             }else{
+//                 queue.push(curr.right);
+//             }
+//         }
+//     }
+    
+//     inOrder(root){
+//         if(root){
+//             this.inOrder(root.left);
+//             console.log(root.data);
+//             this.inOrder(root.right);
+//         }
+//     }
+// }
+
+
+// const tree = new BinaryTree();
+
+// tree.insert(10)
+// tree.insert(20)
+// tree.insert(30)
+// tree.insert(40)
+// tree.inOrder(tree.root)
+
+
+
+// BINARY SEARCH TREE IMPLEMENTATION
+
 // class BinarySearchTree {
 //     constructor(){
 //         this.root = null
