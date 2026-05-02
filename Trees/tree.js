@@ -54,90 +54,6 @@
 //         }
 //     }
 
-//     // BFS Traversal
-//     levelOrder(){
-
-//         if(!this.root) return
-
-//         let queue = [this.root]
-
-//         while(queue.length){
-
-//             let current = queue.shift()
-
-//             console.log(current.data)
-
-//             if(current.left){
-//                 queue.push(current.left)
-//             }
-
-//             if(current.right){
-//                 queue.push(current.right)
-//             }
-//         }
-//     }
-
-//     // DFS PREORDER
-//     preorder(root = this.root){
-
-//         if(!root) return
-
-//         console.log(root.data)
-
-//         this.preorder(root.left)
-//         this.preorder(root.right)
-//     }
-
-//     // DFS INORDER
-//     inorder(root = this.root){
-
-//         if(!root) return
-
-//         this.inorder(root.left)
-
-//         console.log(root.data)
-
-//         this.inorder(root.right)
-//     }
-
-//     // DFS POSTORDER
-//     postorder(root = this.root){
-
-//         if(!root) return
-
-//         this.postorder(root.left)
-
-//         this.postorder(root.right)
-
-//         console.log(root.data)
-//     }
-
-//     // SEARCH
-//     search(value){
-
-//         if(!this.root) return false
-
-//         let queue = [this.root]
-
-//         while(queue.length){
-
-//             let current = queue.shift()
-
-//             if(current.data === value){
-//                 return true
-//             }
-
-//             if(current.left){
-//                 queue.push(current.left)
-//             }
-
-//             if(current.right){
-//                 queue.push(current.right)
-//             }
-//         }
-
-//         return false
-//     }
 
 //     // DELETE
 //     delete(value){
@@ -192,50 +108,6 @@
 //         }
 //     }
 
-//     // HEIGHT
-//     height(root = this.root){
-
-//         if(!root){
-//             return 0
-//         }
-
-//         let left = this.height(root.left)
-//         let right = this.height(root.right)
-
-//         return Math.max(left, right) + 1
-//     }
-
-//     // COUNT NODES
-//     count(root = this.root){
-
-//         if(!root){
-//             return 0
-//         }
-
-//         return (
-//             1 +
-//             this.count(root.left) +
-//             this.count(root.right)
-//         )
-//     }
-
-//     // COUNT LEAF NODES
-//     leafCount(root = this.root){
-
-//         if(!root){
-//             return 0
-//         }
-
-//         if(!root.left && !root.right){
-//             return 1
-//         }
-
-//         return (
-//             this.leafCount(root.left) +
-//             this.leafCount(root.right)
-//         )
-//     }
-
 //     // FIND MAX
 //     findMax(root = this.root){
 
@@ -262,58 +134,6 @@
 //             this.findMin(root.left),
 //             this.findMin(root.right)
 //         )
-//     }
-
-//     // CHECK IDENTICAL TREES
-//     isIdentical(root1, root2){
-
-//         if(!root1 && !root2){
-//             return true
-//         }
-
-//         if(!root1 || !root2){
-//             return false
-//         }
-
-//         return (
-//             root1.data === root2.data &&
-//             this.isIdentical(root1.left, root2.left) &&
-//             this.isIdentical(root1.right, root2.right)
-//         )
-//     }
-
-//     // CHECK IF TREE CONTAINS VALUE
-//     contains(root = this.root, value){
-
-//         if(!root){
-//             return false
-//         }
-
-//         if(root.data === value){
-//             return true
-//         }
-
-//         return (
-//             this.contains(root.left, value) ||
-//             this.contains(root.right, value)
-//         )
-//     }
-
-//     // MIRROR TREE
-//     invert(root = this.root){
-
-//         if(!root){
-//             return null
-//         }
-
-//         let temp = root.left
-//         root.left = root.right
-//         root.right = temp
-
-//         this.invert(root.left)
-//         this.invert(root.right)
-
-//         return root
 //     }
 // }
 
