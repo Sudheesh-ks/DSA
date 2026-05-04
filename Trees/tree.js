@@ -22,7 +22,6 @@
 //         this.root = null
 //     }
 
-//     // INSERT (Level Order)
 //     insert(data){
 
 //         let newNode = new Node(data)
@@ -55,7 +54,6 @@
 //     }
 
 
-//     // DELETE
 //     delete(value){
 
 //         if(!this.root) return
