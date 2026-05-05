@@ -106,7 +106,6 @@
 //         }
 //     }
 
-//     // FIND MAX
 //     findMax(root = this.root){
 
 //         if(!root){
@@ -120,7 +119,6 @@
 //         )
 //     }
 
-//     // FIND MIN
 //     findMin(root = this.root){
 
 //         if(!root){
