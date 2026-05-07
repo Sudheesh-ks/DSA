@@ -462,6 +462,39 @@
 //            this.isBalanced(root.right);
 // }
 
+// isPerfect(){
+//     const depth = this.leftDepth(this.root);
+//     return this.check(this.root,depth,0);
+// }
+
+// leftDepth(node){
+//     let count = 0;
+
+//     while(node){
+//         count++;
+//         node = node.left;
+//     }
+
+//     return count;
+// }
+
+// check(node,depth,level){
+//     if(!node) return true;
+
+//     // leaf node
+//     if(!node.left && !node.right){
+//         return depth === level + 1;
+//     }
+
+//     // node with one child
+//     if(!node.left || !node.right){
+//         return false;
+//     }
+
+//     return this.check(node.left,depth,level+1) &&
+//            this.check(node.right,depth,level+1);
+// }
+
 
     // kthLargest(root,k){
     //     let count = 0;
