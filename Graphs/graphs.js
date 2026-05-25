@@ -18,7 +18,7 @@
 //             this.addVertex(vertex2)
 //         }
 //         this.adjacencyList[vertex1].add(vertex2)
-//         this.adjacencyList[vertex2].add(vertex2)
+//         this.adjacencyList[vertex2].add(vertex1)
 //     }
 
 
