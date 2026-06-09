@@ -112,9 +112,8 @@
 //             while(curr){
 //                 if(curr.data > max){
 //                     max = curr.data
-//                 }else{
-//                     curr = curr.next;
 //                 }
+//                    curr = curr.next;
 //             }
 //             return max
 //         }
