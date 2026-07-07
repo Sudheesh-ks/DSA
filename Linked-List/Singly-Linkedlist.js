@@ -526,6 +526,42 @@
 //         return mergeSort;
 //     }
 
+
+// Another efficient approach
+
+// merge(list){
+//         let curr1 = this.head;
+//         let curr2 = list.head;
+        
+//         let head;
+        
+//         if(curr1.data <= curr2.data){
+//             head = curr1;
+//             curr1 = curr1.next
+//         }else{
+//             head = curr2;
+//             curr2 = curr2.next;
+//         }
+        
+//         let node = head;
+        
+//         while(curr1 && curr2){
+//             if(curr1.data <= curr2.data){
+//                 node.next = curr1;
+//                 curr1 = curr1.next;
+//             }else{
+//                 node.next = curr2;
+//                 curr2 = curr2.next;
+//             }
+//             node = node.next;
+//         }
+        
+//             node.next = curr1 ? curr1 : curr2;
+
+//         this.head = head;
+//         return head;
+//     }
+
 //     // Printing the linkedlist
 //     print(){
 //         if(this.size === 0){
