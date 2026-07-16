@@ -137,6 +137,38 @@
     // }
 
 
+// Using DFS
+
+// cloneGraph(){
+//         const clonedGraph = new Graph();
+//         let visited = new Set();
+        
+//         const dfs = (vertex) => {
+//             if(visited.has(vertex)) return;
+            
+//             visited.add(vertex);
+//             clonedGraph.addVertex(vertex);
+            
+//             for(let neighbour of this.adjacencyList[vertex]){
+//                 clonedGraph.addVertex(neighbour);
+//                 clonedGraph.addEdge(vertex,neighbour);
+                
+//                 if(!visited.has(neighbour)){
+//                     dfs(neighbour);
+//                 }
+//             }
+//         }
+        
+//         for(let vertex in this.adjacencyList){
+//             if(!visited.has(vertex)){
+//                 dfs(vertex);
+//             }
+//         }
+        
+//         return clonedGraph;
+//     }
+
+
 // dfs(start){
 //         let visited = new Set();
         
