@@ -134,6 +134,21 @@
 // }
 
 
+// Max Depth
+
+// var maxDepth = function(root) {
+//     if(!root) return 0;
+//     let maxDepth = 0;
+//     const traverse = (curr,depth) => {
+//         maxDepth = Math.max(maxDepth,depth);
+//         if(curr.left) traverse(curr.left,depth + 1);
+//         if(curr.right) traverse(curr.right,depth + 1);
+//     }
+//     traverse(root,1);
+//     return maxDepth;
+// };
+
+
 
 // BINARY SEARCH TREE IMPLEMENTATION
 
