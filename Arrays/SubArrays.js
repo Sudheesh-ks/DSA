@@ -154,3 +154,25 @@
 // }
 
 // console.log(productExceptSelf([1,2,3,4]));
+
+
+// Longest subarray with sum k
+// function longestSubarray(nums, k) {
+//     let maxLength = 0;
+
+//     for (let i = 0; i < nums.length; i++) {
+//         let sum = 0;
+
+//         for (let j = i; j < nums.length; j++) {
+//             sum += nums[j];
+
+//             if (sum === k) {
+//                 maxLength = Math.max(maxLength, j - i + 1);
+//             }
+//         }
+//     }
+
+//     return maxLength;
+// }
+
+// console.log(longestSubarray([1,-1,5,-2,3], 3));
